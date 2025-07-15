@@ -108,6 +108,21 @@ smb2Client.mkdir('path\\to\\the\\directory', function(err) {
 });
 ```
 
+> `smb2Client.mkdirp ( path, [mode], callback )`
+
+Asynchronous recursive directory creation: create a directory and any necessary parent directories.
+
+`mode` defaults to `0o777`.
+
+Example:
+
+```javascript
+smb2Client.mkdirp('path\\to\\deeply\\nested\\directory', function(err) {
+  if (err) throw err;
+  console.log('Directory structure created recursively!');
+});
+```
+
 > `smb2Client.readdir ( path, [options], callback )`
 
 - `path` String
