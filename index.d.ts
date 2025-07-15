@@ -63,6 +63,10 @@ declare class SMB2 {
   mkdir(path: string, mode: number, cb: (err?: Error) => void): void;
   mkdir(path: string, cb: (err?: Error) => void): void;
 
+  mkdirp(path: string, mode?: number): Promise<void>;
+  mkdirp(path: string, mode: number, cb: (err?: Error) => void): void;
+  mkdirp(path: string, cb: (err?: Error) => void): void;
+
   readdir(path: string, options?: IEncodingOption): Promise<string[]>;
   readdir(path: string, options: IEncodingOption & IStatsOption): Promise<IFileStats[]>;
   readdir(path: string, cb: (err?: Error, files?: string[]) => void): void;
